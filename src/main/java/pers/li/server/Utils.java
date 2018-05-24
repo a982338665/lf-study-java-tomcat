@@ -29,7 +29,7 @@ public  class Utils {
         if(type.equalsIgnoreCase("jpg")||type.equalsIgnoreCase("png")){
             return "Content-Type:image/jpeg";
         }else {
-            return "Content-Type:text/html;charset=UTF-8";
+            return "Content-Type:text/html";
         }
     }
 

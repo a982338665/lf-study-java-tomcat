@@ -25,15 +25,16 @@ public class HttpResponse {
         byte[] buff = new byte[1024];
         int len=0;
         //回应的状态行
-        String statusLine = "HTTP/1.1 200 OK\r\n";
-        byte[] statusLineBytes = statusLine.getBytes();
-        os.write(statusLineBytes);
-        //回应的头部
-        String responseHeader = String.format(Utils.getContentType(path) );
-        byte[] responseHeaderBytes = responseHeader.getBytes();
-        os.write(responseHeaderBytes);
+//        String statusLine = "HTTP/1.1 200 OK\r\n";
+//        byte[] statusLineBytes = statusLine.getBytes();
+//        os.write(statusLineBytes);
+//        System.out.println("return Content-Type--->"+Utils.getContentType(path));
+//        //回应的头部
+//        String responseHeader = String.format(Utils.getContentType(path)+";\r\nContent-Length:" );
+//        byte[] responseHeaderBytes = responseHeader.getBytes();
+//        os.write(responseHeaderBytes);
         //头部与内容的分隔行
-        os.write(new byte[]{13,10});
+//        os.write(new byte[]{13,10});
         while ((len = fis.read(buff))!=-1){
             os.write(buff,0,len);
         };
